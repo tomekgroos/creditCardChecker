@@ -66,8 +66,18 @@ const validateCard = (arr) => {
 
   const isValid = checkSum % 10 == 0 ? "card is valid" : "card is not valid";
 
-  return console.log(isValid);
+  return isValid;
 };
 
-validateCard(valid1);
-validateCard(invalid1);
+/* validateCard(valid1);
+validateCard(invalid1); */
+
+let cardCounter = 0;
+
+batch.forEach((card) => {
+  cardCounter++;
+  
+
+  console.log(`Validation for the ${cardCounter} card: ${validateCard(card)}`)
+});
+
