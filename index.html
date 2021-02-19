@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-    <body onload="validateCard(valid1)">
+    <body>
         <header>
             <p>Credit Card Checker</p>
         </header>
@@ -12,10 +12,54 @@
             <div class="container">
                 <form>
                     <label for="cardNumber">Please enter your credit card number</label>
-                    <p>Credit Card Number</p>
+                    <form action="POST">
+                        <p>Credit Card Number</p>
+                        <div id="numbers-box"></div>
+                            <input class="single-number" id="one" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'two')" onkeypress=""/>
+                            <input class="single-number" id="two" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'three')"/>
+                            <input class="single-number" id="three" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'four')"/>
+                            <input class="single-number" id="four" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'five')" />
+                            <div class="space"></div>
+                            <input class="single-number" id="five" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'six')"/>
+                            <input class="single-number" id="six" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'seven')"/>
+                            <input class="single-number" id="seven" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'eight')"/>
+                            <input class="single-number" id="eight" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'nine')"/>
+                            <div class="space"></div>
+                            <input class="single-number" id="nine" type="text=" maxlength="1" 
+                            onkeyup="jumpNext(this, 'ten')"/>
+                            <input class="single-number" id="ten" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'eleven')"/>
+                            <input class="single-number" id="eleven" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'twelve')"/>
+                            <input class="single-number" id="twelve" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'thirteen')"/>
+                            <div class="space"></div>
+                            <input class="single-number" id="thirteen" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'fourteenth')"/>
+                            <input class="single-number" id="fourteenth" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'fifteenth')"/>
+                            <input class="single-number" id="fifteenth" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'sixteenth')"/>
+                            <input class="single-number" id="sixteenth" type="text" maxlength="1" />
+                        </div>
+
+                    </form>
+                   
                 </form>
             </div>
         </section>
+
+        
     </body>
 
 </html>
+
+ł=

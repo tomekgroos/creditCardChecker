@@ -72,12 +72,27 @@ const validateCard = (arr) => {
 /* validateCard(valid1);
 validateCard(invalid1); */
 
-let cardCounter = 0;
+/* let cardCounter = 0;
 
 batch.forEach((card) => {
-  cardCounter++;
+  cardCounter++; */
   
 
-  console.log(`Validation for the ${cardCounter} card: ${validateCard(card)}`)
-});
+/*   console.log(`Validation for the ${cardCounter} card: ${validateCard(card)}`)
+}); */
 
+// jump to the next number
+
+const jumpNext = (box, nextBox) => {
+  let boxLength = box.value.length;
+  let maxLength = box.getAttribute("maxlength");
+  if(boxLength == maxLength){
+    document.getElementById(nextBox).focus();
+  }
+  console.log(box);
+  console.log(nextBox);
+}
+
+const backSpace = (field, prevField) =>{
+  
+}

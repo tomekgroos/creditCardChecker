@@ -43,3 +43,17 @@ section p {
     background-color: black;
 }
 
+.numbers-box{
+    width: 100%;
+}
+
+.single-number{
+    width: 30px;
+    height: 30px;
+}
+
+.space{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
