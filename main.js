@@ -76,7 +76,6 @@ validateCard(invalid1); */
 
 batch.forEach((card) => {
   cardCounter++; */
-  
 
 /*   console.log(`Validation for the ${cardCounter} card: ${validateCard(card)}`)
 }); */
@@ -86,13 +85,49 @@ batch.forEach((card) => {
 const jumpNext = (box, nextBox) => {
   let boxLength = box.value.length;
   let maxLength = box.getAttribute("maxlength");
-  if(boxLength == maxLength){
+  if (boxLength == maxLength) {
     document.getElementById(nextBox).focus();
   }
-  console.log(box);
-  console.log(nextBox);
-}
+};
 
-const backSpace = (field, prevField) =>{
-  
-}
+// jump to previous number after erase
+
+const backSpace = (field, prevField) => {
+  window.addEventListener("keydown", (e) => {
+    if (e.keyCode === 8) {
+      let fieldLength = field.value.length;
+      let fieldMaxLength = field.getAttribute("maxlength");
+      if (fieldLength < fieldMaxLength) {
+        document.getElementById(prevField).focus();
+      }
+    }
+  });
+};
+
+// move numbers into array
+
+const getValue = (event) => {
+  const allNumbers = document.querySelectorAll("input");
+
+  const allNumbersArray = Array.from(allNumbers);
+  event.preventDefault();
+
+  const newArray = allNumbersArray.map((el) => {
+
+    return el.value
+   
+  }).map(el => Number(el))
+
+console.log(newArray);
+
+/* const stringToNumber = newArray.map((el) => Number(el))
+
+console.log(stringToNumber);
+ */
+
+
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("getNumbers").addEventListener("click", getValue);
+});

@@ -16,41 +16,56 @@
                         <p>Credit Card Number</p>
                         <div id="numbers-box"></div>
                             <input class="single-number" id="one" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'two')" onkeypress=""/>
+                            onkeyup="jumpNext(this, 'two')"/>
                             <input class="single-number" id="two" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'three')"/>
+                            onkeyup="jumpNext(this, 'three')"
+                            onkeydown="backSpace(this, 'one')"/>
                             <input class="single-number" id="three" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'four')"/>
+                            onkeyup="jumpNext(this, 'four')"
+                            onkeydown="backSpace(this, 'two')"/>
                             <input class="single-number" id="four" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'five')" />
+                            onkeyup="jumpNext(this, 'five')"
+                            onkeydown="backSpace(this, 'three')" />
                             <div class="space"></div>
                             <input class="single-number" id="five" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'six')"/>
+                            onkeyup="jumpNext(this, 'six')"
+                            onkeydown="backSpace(this, 'four')"/>
                             <input class="single-number" id="six" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'seven')"/>
+                            onkeyup="jumpNext(this, 'seven')"
+                            onkeydown="backSpace(this, 'five')"/>
                             <input class="single-number" id="seven" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'eight')"/>
+                            onkeyup="jumpNext(this, 'eight')"
+                            onkeydown="backSpace(this, 'six')"/>
                             <input class="single-number" id="eight" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'nine')"/>
+                            onkeyup="jumpNext(this, 'nine')"
+                            onkeydown="backSpace(this, 'seven')"/>
                             <div class="space"></div>
                             <input class="single-number" id="nine" type="text=" maxlength="1" 
-                            onkeyup="jumpNext(this, 'ten')"/>
+                            onkeyup="jumpNext(this, 'ten')"
+                            onkeydown="backSpace(this, 'eight')"/>
                             <input class="single-number" id="ten" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'eleven')"/>
+                            onkeyup="jumpNext(this, 'eleven')"
+                            onkeydown="backSpace(this, 'nine')"/>
                             <input class="single-number" id="eleven" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'twelve')"/>
+                            onkeyup="jumpNext(this, 'twelve')"
+                            onkeydown="backSpace(this, 'ten')"/>
                             <input class="single-number" id="twelve" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'thirteen')"/>
+                            onkeyup="jumpNext(this, 'thirteenth')"
+                            onkeydown="backSpace(this, 'eleven')"/>
                             <div class="space"></div>
-                            <input class="single-number" id="thirteen" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'fourteenth')"/>
+                            <input class="single-number" id="thirteenth" type="text" maxlength="1" 
+                            onkeyup="jumpNext(this, 'fourteenth')"
+                            onkeydown="backSpace(this, 'twelve')"/>
                             <input class="single-number" id="fourteenth" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'fifteenth')"/>
+                            onkeyup="jumpNext(this, 'fifteenth')"
+                            onkeydown="backSpace(this, 'thirteenth')"/>
                             <input class="single-number" id="fifteenth" type="text" maxlength="1" 
-                            onkeyup="jumpNext(this, 'sixteenth')"/>
-                            <input class="single-number" id="sixteenth" type="text" maxlength="1" />
+                            onkeyup="jumpNext(this, 'sixteenth')"
+                            onkeydown="backSpace(this, 'fourteenth')"/>
+                            <input class="single-number" id="sixteenth" type="text" maxlength="1"
+                            onkeydown="backSpace(this, 'fifteenth')" />
                         </div>
-
+                        <button id="getNumbers">Submit</button>
                     </form>
                    
                 </form>
