@@ -85,16 +85,28 @@ const getValue = (event) => {
 
   allNumbersArray
     .map((el) => {
+      
       if(el.value.length < 1){
         console.log("field cannot be empty!");
         return;
-      }else{
+      }
+      else if(isNaN(el.value)){
+        return console.log("field must be a number!");
+      }
+      else{
+        
         return el.value;
+        
       }
      
     })
     .map((el) => Number(el))
-    .map((el) => newArray.push(el));
+    .map((el) => newArray.push(el))
+    
+    /* newArray.forEach((el) =>{
+      el.
+    }) */
+
 
     console.log(newArray);
     console.log(validateCard(newArray));
