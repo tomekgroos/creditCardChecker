@@ -10,6 +10,7 @@ const validateCard = (arr) => {
   let checkSum = 0;
 
   for (i = 1; i < arrCopy.length; i += 2) {
+
     let double = arrCopy[i] * 2;
 
     if (double > 9) {
@@ -28,10 +29,11 @@ const validateCard = (arr) => {
 
   checkSum = evenSum + oddSum;
 
-  const isValid = checkSum % 10 == 0 ? "card is valid" : "card is not valid";
+  const isValid = checkSum % 10 == 0 ? true: false;
   console.log(isValid);
 
   if (isValid === true) {
+    showInfo.classList.contains('invalid') ? showInfo.classList.remove("invalid") : false
     showInfo.classList.add("valid");
     showInfo.innerHTML = "Your card is valid";
   } else {
@@ -39,6 +41,8 @@ const validateCard = (arr) => {
     showInfo.innerHTML = "Your card is not valid";
     
   }
+
+  newArray = [];
 
 
 
@@ -82,15 +86,14 @@ const getValue = (event) => {
  event.preventDefault();
  
   const allNumbersArray = Array.from(allNumbers);
-  let error = false;
+ let error = false; 
 
   allNumbersArray
     .map((el) => {
       
       if(el.value.length < 1){
-      
-        showInfo.classList.add("error")
         error = true;
+        showInfo.classList.add("invalid")
          console.log("You must fulfill all fields!");
         return showInfo.innerHTML = "You must fulfill all fields!";
         
@@ -98,8 +101,8 @@ const getValue = (event) => {
         
       }
       else if(isNaN(el.value)){
-       error = true;
-        showInfo.classList.add("error")
+        error = true;
+        showInfo.classList.add("invalid")
          console.log("Each field must be a number!");
         return showInfo.innerHTML = "Each field must be a number!";
       
@@ -115,17 +118,14 @@ const getValue = (event) => {
     .map((el) => Number(el))
     .map((el) => newArray.push(el))
     
-if(error === true){
-  newArray = [];
-  console.log(error);
-  error = false;
-  console.log(error);
+  if (error){
+    newArray = [];
+    error = false;
+  } else {
+    validateCard(newArray);
+  }
   
-}else if (error === false){
-  validateCard(newArray);
-  console.log(error);
-  newArray = [];
-}
+
 
     //4596 5480 0916 8709
     console.log(newArray);
