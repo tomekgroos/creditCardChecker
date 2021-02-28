@@ -39,10 +39,10 @@ const validateCard = (arr) => {
   } else {
     showInfo.classList.add("invalid");
     showInfo.innerHTML = "Your card is not valid";
-    
+     newArray = [];
   }
 
-  newArray = [];
+ 
 
 
 
@@ -131,20 +131,28 @@ const getValue = (event) => {
     console.log(newArray);
     
     
-    // clear form
-    document.forms[0].reset();
+  
+  
     
   
 };
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("getNumbers").addEventListener("click", getValue);
 
-  
+    // clear form
+    const clearButton = document.getElementById("clear");
+    clearButton.addEventListener("click", () =>{
+       document.forms[0].reset();
+       window.location.reload();
+    })
+
+
 });
 
-
+  
 
 

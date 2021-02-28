@@ -3,17 +3,19 @@
 <script defer src="main.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="style.css" type="text/css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Prompt:wght@400;700&display=swap" rel="stylesheet">
 </head>
     <body>
         <header>
-            <p>Credit Card Checker</p>
+            <p>16 Numbers Cards Validity Checker</p>
         </header>
             <section>
             <div class="container">
-                <form>
-                    <label for="cardNumber">Please enter your credit card number</label>
-                    <form action="POST">
-                        <p>Credit Card Number</p>
+                <p>Enter Card Number:</p>
+          
+                    <form id="form" action="POST">
+                        
                         <div id="numbers-box"></div>
                             <input class="single-number" id="one" type="text" maxlength="1"
                             onkeyup="jumpNext(this, 'two')"/>
@@ -67,10 +69,12 @@
                             <div id="showInfo"></div>
                         </div>
                         
-                        <button id="getNumbers">Submit</button>
+                       
                     </form>
-                   
-                </form>
+                    <button id="clear">Clear</button>
+                    <button id="getNumbers">Check</button>
+                    
+            
             </div>
         </section>
 
@@ -79,4 +83,3 @@
 
 </html>
 
-ł=

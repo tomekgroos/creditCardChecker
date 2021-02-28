@@ -5,23 +5,30 @@
 }
 
 body{
-    background-color: white;
+    background:linear-gradient(#293959,#182848);
+    font-family: "nunito";
 }
 
 header{
+    
     position: absolute;
-    left: 50%;
+    left: 49%;
     top: 10%;
-    transform: translate(-50%);
+  
 }
 
 header p{
-    font-size: 4rem;
-    color: blue;
+    transform:translate(-50%, 20%);
+    font-size: 3rem;
+    color: white;
+    text-shadow: 5px 5px 5px #000;
 }
 
 section{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 25%;
     left: 50%;
     width: 80vw;
@@ -30,17 +37,33 @@ section{
 }
 
 section p {
-    font-size: 3rem;
+    
+    
+    font-size: 2.7rem;
     color: white;
+    
 }
 
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 70%;
     height: 100%;
-    background-color: black;
+    /* background: linear-gradient(#bdc3c7,#2c3e50); */
+    background: url("img/world.jpg");
+    background-position:30% 30%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,1);
+    text-shadow: 2px 2px 2px #000;
+
+}
+
+
+
+.container p{
+    position: absolute;
+    transform: translate(0%, -290%);
 }
 
 .numbers-box{
@@ -48,8 +71,39 @@ section p {
 }
 
 .single-number{
-    width: 30px;
-    height: 30px;
+    margin-left: 3px;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,1);
+    
+}
+
+form{
+    position: absolute;
+    top: 50%;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    
+}
+
+input:focus{
+    border: 3px solid rgba(4,78,135,0.7);
+    border-radius: 5px;
+    outline: 0;
+    outline-offset: 1px;
+    box-shadow: 0px 0px 83px 9px rgba(4,78,135,1);
+
+
+    transform: translate(0px, -5px);
+ 
 }
 
 .space{
@@ -59,16 +113,80 @@ section p {
 }
 
 
-
-
 .valid{
     margin-top: 40px;
     font-size: 1.3rem;
     color: green;
+    text-shadow: 2px 2px 2px #000;
+    font-style: italic;
 }
 
 .invalid{
     margin-top: 40px;
     font-size: 1.3rem;
     color:red;
+    text-shadow: 2px 2px 2px #000;
+    font-style: italic;
 }
+
+ /* buttons*/
+#getNumbers {
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    position: absolute;
+    bottom: 5%;
+    left: 70%;
+    border-radius: 20px;
+    border: 0px;
+    font-weight: bold;
+    background-color: white;
+    font-size: 1.7rem;
+    box-shadow: 0px 0px 20px 3px rgba(255,255,255,0.2);
+    transition: ease-in-out 0.5s;
+    outline:none;
+}
+
+#getNumbers:hover{
+    background-color:rgba(4,78,135,1);
+    outline:none;
+    border:none;
+    color: white;
+}
+
+#getNumbers:active{
+    transform:translateY(60px);
+    outline:none;
+}
+
+#clear {
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+    border-radius: 20px;
+    border: 0px;
+    font-weight: bold;
+    background-color: #B80F0A;
+    color: white;
+    font-size: 1.7rem;
+    box-shadow: 0px 0px 20px 3px rgba(184, 15, 10, 0.4);
+    transition: ease-in-out 0.5s;
+    outline:none;
+}
+
+#clear:hover{
+    background-color:black;
+    outline:none;
+    border:none;
+    color: #B80F0A;
+    
+}
+
+#clear:active{
+    transform:translateY(60px);
+    outline:none;
+}
+
