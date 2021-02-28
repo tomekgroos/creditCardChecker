@@ -1,4 +1,6 @@
-
+ const allNumbers = document.querySelectorAll("input");
+const showInfo = document.getElementById("showInfo");
+let newArray = [];
 
 const validateCard = (arr) => {
   let arrCopy = arr.slice();
@@ -27,21 +29,22 @@ const validateCard = (arr) => {
   checkSum = evenSum + oddSum;
 
   const isValid = checkSum % 10 == 0 ? "card is valid" : "card is not valid";
+  console.log(isValid);
 
-  return isValid;
+  if (isValid === true) {
+    showInfo.classList.add("valid");
+    showInfo.innerHTML = "Your card is valid";
+  } else {
+    showInfo.classList.add("invalid");
+    showInfo.innerHTML = "Your card is not valid";
+    
+  }
+
+
+
   
 };
 
-/* validateCard(valid1);
-validateCard(invalid1); 
-
-let cardCounter = 0; */
-
-/* batch.forEach((card) => {
-  cardCounter++; 
-
- console.log(`Validation for the ${cardCounter} card: ${validateCard(card)}`)
-});  */
 
 // jump to the next number
 
@@ -69,32 +72,41 @@ const backSpace = (field, prevField) => {
 
 // move numbers into array
 
-let newArray = [];
+
 
 // validations
 
 
 
 const getValue = (event) => {
-  const allNumbers = document.querySelectorAll("input");
-
-  
-
+ event.preventDefault();
+ 
   const allNumbersArray = Array.from(allNumbers);
-  event.preventDefault();
+  let error = false;
 
   allNumbersArray
     .map((el) => {
       
       if(el.value.length < 1){
-        console.log("field cannot be empty!");
-        return;
+      
+        showInfo.classList.add("error")
+        error = true;
+         console.log("You must fulfill all fields!");
+        return showInfo.innerHTML = "You must fulfill all fields!";
+        
+        console.log(error);
+        
       }
       else if(isNaN(el.value)){
-        return console.log("field must be a number!");
+       error = true;
+        showInfo.classList.add("error")
+         console.log("Each field must be a number!");
+        return showInfo.innerHTML = "Each field must be a number!";
+      
+       console.log(error);
+        
       }
       else{
-        
         return el.value;
         
       }
@@ -103,23 +115,33 @@ const getValue = (event) => {
     .map((el) => Number(el))
     .map((el) => newArray.push(el))
     
-    /* newArray.forEach((el) =>{
-      el.
-    }) */
+if(error === true){
+  newArray = [];
+  console.log(error);
+  error = false;
+  console.log(error);
+  
+}else if (error === false){
+  validateCard(newArray);
+  console.log(error);
+  newArray = [];
+}
 
-
+    //4596 5480 0916 8709
     console.log(newArray);
-    console.log(validateCard(newArray));
     
-    // clear fields
-    allNumbers.forEach(el =>{
-      el.value = "";
-    })
-
+    
+    // clear form
+    document.forms[0].reset();
+    
+  
 };
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("getNumbers").addEventListener("click", getValue);
+
+    document.getElementById("getNumbers").addEventListener("click", getValue);
+
   
 });
 

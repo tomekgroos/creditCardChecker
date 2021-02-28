@@ -57,3 +57,22 @@ section p {
     height: 30px;
     display: inline-block;
 }
+
+
+.error{
+    margin-top: 40px;
+    font-size: 1.3rem;
+    color:red;
+}
+
+.valid{
+    margin-top: 40px;
+    font-size: 1.3rem;
+    color: green;
+}
+
+.invalid{
+    margin-top: 40px;
+    font-size: 1.3rem;
+    color:red;
+}
