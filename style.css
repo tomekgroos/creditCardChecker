@@ -5,52 +5,48 @@
 }
 
 body{
+    margin: 0 auto;
+    overflow: hidden;
     background:linear-gradient(#293959,#182848);
     font-family: "nunito";
 }
 
 header{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-    position: absolute;
-    left: 49%;
-    top: 10%;
+    font-size: 2rem;
+
   
 }
 
 header p{
-    transform:translate(-50%, 20%);
-    font-size: 3rem;
+    margin-top: 20px;
+    font-size: 2.5rem;
     color: white;
     text-shadow: 5px 5px 5px #000;
 }
 
 section{
-    position: absolute;
     display: flex;
-    align-items: center;
+    margin-top: 30px;
     justify-content: center;
-    top: 25%;
-    left: 50%;
-    width: 80vw;
-    height: 65vh;
-    transform: translate(-50%);
-}
 
-section p {
-    
-    
-    font-size: 2.7rem;
-    color: white;
-    
+    width: 100vw;
+    height: 100vh;
+ 
 }
 
 .container{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 70%;
-    height: 100%;
-    /* background: linear-gradient(#bdc3c7,#2c3e50); */
+    height: 75%;
+
     background: url("img/world.jpg");
     background-position:30% 30%;
     border-radius: 30px;
@@ -62,12 +58,20 @@ section p {
 
 
 .container p{
-    position: absolute;
-    transform: translate(0%, -290%);
+    transform: translate(5%, -100%);
+    font-size: 2.3rem;
+    color: white;
 }
 
 .numbers-box{
+    display: flex;
+    justify-content: space-evenly;
+   
     width: 100%;
+}
+
+.numbers-box > *{
+    margin-left: 40px;
 }
 
 .single-number{
@@ -78,10 +82,7 @@ section p {
     
 }
 
-form{
-    position: absolute;
-    top: 50%;
-}
+
 
 input{
     border: 1px solid black;
@@ -106,15 +107,9 @@ input:focus{
  
 }
 
-.space{
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-}
-
-
 .valid{
-    margin-top: 40px;
+    margin-top: 15px;
+    margin-left: 45px;
     font-size: 1.3rem;
     color: green;
     text-shadow: 2px 2px 2px #000;
@@ -122,7 +117,8 @@ input:focus{
 }
 
 .invalid{
-    margin-top: 40px;
+    margin-top: 15px;
+    margin-left: 45px;
     font-size: 1.3rem;
     color:red;
     text-shadow: 2px 2px 2px #000;
@@ -135,7 +131,7 @@ input:focus{
     width: 10rem;
     height: 3rem;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 70%;
     border-radius: 20px;
     border: 0px;
@@ -164,7 +160,7 @@ input:focus{
     width: 10rem;
     height: 3rem;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 20%;
     border-radius: 20px;
     border: 0px;
@@ -190,3 +186,131 @@ input:focus{
     outline:none;
 }
 
+@media screen and (max-width: 1170px)  {
+    .numbers-box{
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 2;
+    }
+    .numbers-box > * {
+        margin-top: 50px;
+    }
+    .space-1{
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 0;
+        grid-row-end: 1;
+    }
+    .space-2{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 0;
+        grid-row-end: 1;
+    }
+    .space-3{
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .space-4{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #getNumbers{
+        transform: translate(0%, 120%);
+        font-size: 95%;
+        width: 10%;
+        
+    }
+
+    #clear{
+        transform: translate(0%, 120%);
+        font-size: 95%;
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 768px){
+  
+    .numbers-box{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50%;
+        
+    }
+  
+    .numbers-box > * {
+        margin: 0;
+    }
+
+    .space-1{
+       
+        width: 70%;
+        height: 5%;
+      
+    }
+    .space-2{
+       
+        width: 70%;
+        height: 5%;
+        
+    }
+    .space-3{
+      
+        width: 70%;
+        height: 5%;
+       
+    }
+    .space-4{
+       
+        width: 70%;
+        height: 5%;
+        
+    }
+
+    #getNumbers{
+        font-size: 95%;
+        width: 20%;
+        transform: translate(-50%, 100%);
+    }
+
+    #clear{
+        font-size: 95%;
+        width: 20%;
+        transform: translate(10%, 100%);
+    }
+
+    header p{
+        width: 60%;
+        font-size: 75%;
+        text-align: center;
+    }
+
+    .numbers-box{
+        transform: translate(5%, -0%);
+    }
+
+    .container{
+        background-position:100% 95%;
+        background-repeat: repeat;
+        background-size: contain;
+        justify-content: flex-start;
+    
+    }
+
+    .container p {
+        transform: translate(10%, -200%);
+        font-size: 1.4rem;
+    }
+  
+    .valid, .invalid{
+        transform: translate(0%, -160%);
+        font-size: 1rem;
+    }
+    
+} 

@@ -137,6 +137,10 @@ const getValue = (event) => {
   
 };
 
+/*
+4 - Visa
+5 - asterCard
+ */
 
 
 document.addEventListener("DOMContentLoaded", () => {
