@@ -227,14 +227,14 @@ input:focus{
     }
 
     #getNumbers{
-        transform: translate(0%, 100%);
+        transform: translate(0%, 150%);
         font-size: 95%;
         width: 10%;
         
     }
 
     #clear{
-        transform: translate(0%, 100%);
+        transform: translate(0%, 150%);
         font-size: 90%;
         width: 10%;
     }
@@ -286,13 +286,13 @@ input:focus{
     #getNumbers{
         font-size: 95%;
         width: 20%;
-        transform: translate(-50%, 100%);
+        transform: translate(-50%, 160%);
     }
 
     #clear{
         font-size: 95%;
         width: 20%;
-        transform: translate(10%, 100%);
+        transform: translate(10%, 160%);
     }
 
     header p{
