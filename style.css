@@ -66,7 +66,6 @@ section{
 .numbers-box{
     display: flex;
     justify-content: space-evenly;
-   
     width: 100%;
 }
 
@@ -187,10 +186,17 @@ input:focus{
 }
 
 @media screen and (max-width: 1170px)  {
+
+    header p{
+        font-size: 2rem;
+    }
+
     .numbers-box{
         display: grid;
         grid-template-columns: 2;
         grid-template-rows: 2;
+        padding: 0;
+        margin-top: -90px;
     }
     .numbers-box > * {
         margin-top: 50px;
@@ -221,20 +227,24 @@ input:focus{
     }
 
     #getNumbers{
-        transform: translate(0%, 120%);
+        transform: translate(0%, 100%);
         font-size: 95%;
         width: 10%;
         
     }
 
     #clear{
-        transform: translate(0%, 120%);
-        font-size: 95%;
+        transform: translate(0%, 100%);
+        font-size: 90%;
         width: 10%;
+    }
+    .container p{
+        transform: translateY(-170%);
+        font-size: 1.5rem;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 420px){
   
     .numbers-box{
         display: flex;
@@ -304,7 +314,7 @@ input:focus{
     }
 
     .container p {
-        transform: translate(10%, -200%);
+        transform: translate(15%, -450%);
         font-size: 1.4rem;
     }
   
