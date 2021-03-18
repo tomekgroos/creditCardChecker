@@ -106,6 +106,7 @@ input:focus{
  
 }
 
+/*when everything goes correct*/
 .valid{
     margin-top: 15px;
     margin-left: 45px;
@@ -115,8 +116,10 @@ input:focus{
     font-style: italic;
 }
 
+/*when the error occurs*/
+
 .invalid{
-    margin-top: 15px;
+    margin-top: 65px;
     margin-left: 45px;
     font-size: 1.3rem;
     color:red;
@@ -286,13 +289,13 @@ input:focus{
     #getNumbers{
         font-size: 95%;
         width: 20%;
-        transform: translate(-50%, 160%);
+        transform: translate(-50%, 140%);
     }
 
     #clear{
         font-size: 95%;
         width: 20%;
-        transform: translate(10%, 160%);
+        transform: translate(10%, 140%);
     }
 
     header p{
